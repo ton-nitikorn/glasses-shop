@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="scriptlet" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="30" whenResourceMissingType="Empty" uuid="ee9702b3-d83e-4a6f-b257-743fda74b693">
+	<property name="com.jasperassistant.designer.Grid" value="false"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="12"/>
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="156"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="custNum" class="java.lang.String">
+		<fieldDescription><![CDATA[custNum]]></fieldDescription>
+	</field>
+	<field name="fullName" class="java.lang.String">
+		<fieldDescription><![CDATA[fullName]]></fieldDescription>
+	</field>
+	<field name="place" class="java.lang.String">
+		<fieldDescription><![CDATA[place]]></fieldDescription>
+	</field>
+	<field name="addressLine1" class="java.lang.String">
+		<fieldDescription><![CDATA[addressLine1]]></fieldDescription>
+	</field>
+	<field name="addressLine2" class="java.lang.String">
+		<fieldDescription><![CDATA[addressLine2]]></fieldDescription>
+	</field>
+	<field name="addressLine3" class="java.lang.String">
+		<fieldDescription><![CDATA[addressLine3]]></fieldDescription>
+	</field>
+	<field name="lensType" class="java.lang.String">
+		<fieldDescription><![CDATA[lensType]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="98">
+			<textField>
+				<reportElement uuid="f7a1f487-5c8f-4327-b24d-19f9a4dc4dca" x="20" y="10" width="148" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0366312c-f5e3-4b52-9d31-d8fce70ad042" x="20" y="29" width="148" height="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{place}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c0fbaffb-13cd-49f5-b525-002a10296045" x="20" y="44" width="148" height="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{addressLine1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="43b6a2a1-9b0d-4316-b4dd-849f2aeb9990" x="20" y="59" width="148" height="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{addressLine2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="42603667-4051-451e-b655-00bc2467b7bd" x="20" y="74" width="148" height="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{addressLine3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3c11f545-d79d-46ee-b445-7e04f490352e" x="187" y="74" width="39" height="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3666d967-26a8-4d14-9899-4bbe7556cc70" x="226" y="74" width="53" height="15"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lensType}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

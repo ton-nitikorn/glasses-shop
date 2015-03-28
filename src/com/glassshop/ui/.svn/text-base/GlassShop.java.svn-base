@@ -1,0 +1,43 @@
+package com.glassshop.ui;
+
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class GlassShop {
+
+	public static final int SCREEN_WIDTH = 1280;
+	public static final int SCREEN_HEIGHT = 700;
+	
+	public static Font FONT = null;
+	public static ApplicationContext CONTEXT = null;
+	
+
+	public static void main(String[] args) {
+
+		FONT =  new Font("Tahoma", Font.PLAIN, 14);
+		
+		UIManager.put( "Button.font", FONT);
+		UIManager.put( "Label.font", FONT);
+		
+		try {
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		CONTEXT = new ClassPathXmlApplicationContext("Spring-Module.xml");
+
+		GlassShopFrame glassShopFrame = new GlassShopFrame();
+		glassShopFrame.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+		glassShopFrame.setVisible(true);
+
+		glassShopFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}
+	
+}

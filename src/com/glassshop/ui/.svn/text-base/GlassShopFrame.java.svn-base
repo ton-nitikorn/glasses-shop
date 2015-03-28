@@ -1,0 +1,127 @@
+package com.glassshop.ui;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+
+public class GlassShopFrame extends JFrame implements ActionListener{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	//Menu
+	private JMenu menu = new JMenu("  เข้าสู่ระบบ  ");
+	private JMenu menu_1 = new JMenu("  ข้อมูลลูกค้า  ");
+	private JMenuItem menu_1_1 = new JMenuItem("เพิ่มข้อมูลลูกค้า");
+	private JMenuItem menu_1_2 = new JMenuItem("ค้นหาข้อมูลลูกค้า");
+	private JMenu menu_2 = new JMenu("  ข้อมูลการซื้อ-ขาย  ");
+	private JMenu menu_2_1 = new JMenu("ข้อมูลการสั่งซื้อ");
+	private JMenuItem menu_2_1_1 = new JMenuItem("เพิ่มข้อมูลการสั่งซื้อ");
+	private JMenuItem menu_2_1_2 = new JMenuItem("แก้ไขข้อมูลการสั่งซื้อ");
+	private JMenuItem menu_2_2_1 = new JMenuItem("เพิ่มข้อมูลการขาย");
+	private JMenuItem menu_2_2_2 = new JMenuItem("แก้ไขข้อมูลการขาย");
+	private JMenu menu_3 = new JMenu(" ข้อมูลอื่นๆ ");
+	private JMenu menu_2_2 = new JMenu("ข้อมูลการขาย");
+	private JMenuItem menu_3_1 = new JMenuItem("การจัดการข้อมูลบริษัท");
+	private JMenuItem menu_3_2 = new JMenuItem("การจัดการข้อมูลพนักงานขาย");
+	private JMenuItem menu_3_3 = new JMenuItem("การจัดการข้อมูลชนิดสินค้า");
+	private JMenuItem menu_3_4 = new JMenuItem("การจัดการข้อมูลประเภทสินค้า");
+	private JMenuItem menu_3_5 = new JMenuItem("การจัดการข้อมูลยี่ห้อสินค้า");
+	private JMenu menu_4 = new JMenu("  รายงาน  ");
+	private JMenuItem menu_4_1 = new JMenuItem("ข้อมูลลูกค้า");
+	private JMenuItem menu_4_2 = new JMenuItem("ข้อมูลการสั่งซื้อสินค้า");
+	private JMenuItem menu_4_3 = new JMenuItem("ข้อมูลการขายสินค้า");
+	private JMenuItem menu_4_4 = new JMenuItem("ข้อมูลสินค้าคงเหลือ");
+	private JMenu menu_5 = new JMenu("  เปลี่ยนรหัสผ่าน  ");
+	private JMenu menu_6 = new JMenu(" ออกจากระบบ ");
+	
+	public GlassShopFrame(){
+//		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\e1043227\\Desktop\\glasses.ico"));
+		setTitle("Theera Glasses Shop ");
+		setResizable(true);
+		getContentPane().setLayout(new BorderLayout(0, 0));
+		
+		//create menu bar on the top of screen
+		buildMenuBar();
+
+		
+		menu_3_1.addActionListener(this);	
+	}
+	
+	private void buildMenuBar(){
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		menu.setFont(GlassShop.FONT);
+		menu_1.setFont(GlassShop.FONT);
+		menu_1_1.setFont(GlassShop.FONT);
+		menu_1_2.setFont(GlassShop.FONT);
+		menu_2.setFont(GlassShop.FONT);
+		menu_2_1.setFont(GlassShop.FONT);
+		menu_2_1_1.setFont(GlassShop.FONT);
+		menu_2_1_2.setFont(GlassShop.FONT);
+		menu_2_2.setFont(GlassShop.FONT);
+		menu_2_2_1.setFont(GlassShop.FONT);
+		menu_2_2_2.setFont(GlassShop.FONT);
+		menu_3.setFont(GlassShop.FONT);
+		menu_3_1.setFont(GlassShop.FONT);
+		menu_3_2.setFont(GlassShop.FONT);
+		menu_3_3.setFont(GlassShop.FONT);
+		menu_3_4.setFont(GlassShop.FONT);
+		menu_3_5.setFont(GlassShop.FONT);
+		menu_4.setFont(GlassShop.FONT);
+		menu_4_1.setFont(GlassShop.FONT);
+		menu_4_2.setFont(GlassShop.FONT);
+		menu_4_3.setFont(GlassShop.FONT);
+		menu_4_4.setFont(GlassShop.FONT);
+		menu_5.setFont(GlassShop.FONT);
+		menu_6.setFont(GlassShop.FONT);
+		
+		menuBar.add(menu);
+		menuBar.add(menu_1);
+		menu_1.add(menu_1_1);	
+		menu_1.add(menu_1_2);
+		menuBar.add(menu_2);
+		menu_2.add(menu_2_1);
+		menu_2_1.add(menu_2_1_1);
+		menu_2_1.add(menu_2_1_2);
+		menu_2.add(menu_2_2);
+		menu_2_2.add(menu_2_2_1);
+		menu_2_2.add(menu_2_2_2);
+		menuBar.add(menu_3);
+		menu_3.add(menu_3_1);
+		menu_3.add(menu_3_2);
+		menu_3.add(menu_3_3);
+		menu_3.add(menu_3_4);
+		menu_3.add(menu_3_5);
+		menuBar.add(menu_4);
+		menu_4.add(menu_4_1);
+		menu_4.add(menu_4_2);
+		menu_4.add(menu_4_3);
+		menu_4.add(menu_4_4);
+		menuBar.add(menu_5);
+		menuBar.add(menu_6);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		
+		if(e.getSource() == menu_3_1){
+			VendorPanel panel = new VendorPanel();
+			add(panel, BorderLayout.CENTER);
+			panel.revalidate();
+		}
+
+		validate();
+		
+	}
+
+}

@@ -1,0 +1,135 @@
+package com.glassshop.model;
+
+import java.sql.Date;
+
+public class Customer {
+	
+	private Long custId;
+	private String custNo;
+	private Date custRecordDate;
+	private String custNews;
+	private String custName;
+	private String custSurName;
+	private String custPlace;
+	private String custAddress;
+	private String custSoi;
+	private String custRoad;
+	private String custDistrict;
+	private String custCity;
+	private String custProvince;
+	private String custZipCode;
+	private String custTel;
+	private String custMobile;
+	private Date custBirthDay;
+	private String custTarget;
+	
+	public Long getCustId() {
+		return custId;
+	}
+	public void setCustId(Long custId) {
+		this.custId = custId;
+	}
+	public String getCustNo() {
+		return custNo;
+	}
+	public void setCustNo(String custNo) {
+		this.custNo = custNo;
+	}
+	public Date getCustRecordDate() {
+		return custRecordDate;
+	}
+	public void setCustRecordDate(Date custRecordDate) {
+		this.custRecordDate = custRecordDate;
+	}
+	public String getCustNews() {
+		return custNews;
+	}
+	public void setCustNews(String custNews) {
+		this.custNews = custNews;
+	}
+	public String getCustName() {
+		return custName;
+	}
+	public void setCustName(String custName) {
+		this.custName = custName;
+	}
+	public String getCustSurName() {
+		return custSurName;
+	}
+	public void setCustSurName(String custSurName) {
+		this.custSurName = custSurName;
+	}
+	public String getCustPlace() {
+		return custPlace;
+	}
+	public void setCustPlace(String custPlace) {
+		this.custPlace = custPlace;
+	}
+	public String getCustAddress() {
+		return custAddress;
+	}
+	public void setCustAddress(String custAddress) {
+		this.custAddress = custAddress;
+	}
+	public String getCustSoi() {
+		return custSoi;
+	}
+	public void setCustSoi(String custSoi) {
+		this.custSoi = custSoi;
+	}
+	public String getCustRoad() {
+		return custRoad;
+	}
+	public void setCustRoad(String custRoad) {
+		this.custRoad = custRoad;
+	}
+	public String getCustDistrict() {
+		return custDistrict;
+	}
+	public void setCustDistrict(String custDistrict) {
+		this.custDistrict = custDistrict;
+	}
+	public String getCustCity() {
+		return custCity;
+	}
+	public void setCustCity(String custCity) {
+		this.custCity = custCity;
+	}
+	public String getCustProvince() {
+		return custProvince;
+	}
+	public void setCustProvince(String custProvince) {
+		this.custProvince = custProvince;
+	}
+	public String getCustZipCode() {
+		return custZipCode;
+	}
+	public void setCustZipCode(String custZipCode) {
+		this.custZipCode = custZipCode;
+	}
+	public String getCustTel() {
+		return custTel;
+	}
+	public void setCustTel(String custTel) {
+		this.custTel = custTel;
+	}
+	public String getCustMobile() {
+		return custMobile;
+	}
+	public void setCustMobile(String custMobile) {
+		this.custMobile = custMobile;
+	}
+	public Date getCustBirthDay() {
+		return custBirthDay;
+	}
+	public void setCustBirthDay(Date custBirthDay) {
+		this.custBirthDay = custBirthDay;
+	}
+	public String getCustTarget() {
+		return custTarget;
+	}
+	public void setCustTarget(String custTarget) {
+		this.custTarget = custTarget;
+	}
+
+}

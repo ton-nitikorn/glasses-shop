@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<bean id="vendorDAO" class="com.glassshop.dao.impl.VendorDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+ 	<bean id="customerDAO" class="com.glassshop.dao.impl.CustomerDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="goodsBrandDAO" class="com.glassshop.dao.impl.GoodsBrandDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="goodsDAO" class="com.glassshop.dao.impl.GoodsDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="goodsTypeDAO" class="com.glassshop.dao.impl.GoodsTypeDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="salesManDAO" class="com.glassshop.dao.impl.SalesManDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="customerSightDAO" class="com.glassshop.dao.impl.CustomerSightDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="orderBuyDAO" class="com.glassshop.dao.impl.OrderBuyDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="orderSaleDAO" class="com.glassshop.dao.impl.OrderSaleDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="userDAO" class="com.glassshop.dao.impl.UserDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+</beans>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="scriptlet" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="30" bottomMargin="30" whenResourceMissingType="Empty" uuid="59243453-7965-428e-b6ff-704ad95bd375">
+	<property name="com.jasperassistant.designer.Grid" value="false"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="12"/>
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="792"/>
+	<property name="ireport.y" value="0"/>
+	<style name="AngsanaUPC" isDefault="true" fontName="AngsanaUPC" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\\WINDOWS\\Fonts\\Tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="false"/>
+	<parameter name="SUB_DATA1" class="java.util.HashMap"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="orderNo" class="java.lang.String">
+		<fieldDescription><![CDATA[orderNo]]></fieldDescription>
+	</field>
+	<field name="orderDate" class="java.lang.String">
+		<fieldDescription><![CDATA[orderDate]]></fieldDescription>
+	</field>
+	<field name="vendorName" class="java.lang.String">
+		<fieldDescription><![CDATA[vendorName]]></fieldDescription>
+	</field>
+	<field name="salemanName" class="java.lang.String">
+		<fieldDescription><![CDATA[salemanName]]></fieldDescription>
+	</field>
+	<field name="goodsName" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsName]]></fieldDescription>
+	</field>
+	<field name="goodsType" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsType]]></fieldDescription>
+	</field>
+	<field name="goodsBrand" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsBrand]]></fieldDescription>
+	</field>
+	<field name="goodsSub" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsSub]]></fieldDescription>
+	</field>
+	<field name="goodsCost" class="java.lang.String">
+		<fieldDescription><![CDATA[goodsCost]]></fieldDescription>
+	</field>
+	<field name="stockGoodsQty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stockGoodsQty]]></fieldDescription>
+	</field>
+	<field name="stockSellQty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stockSellQty]]></fieldDescription>
+	</field>
+	<field name="stockQty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[stockQty]]></fieldDescription>
+	</field>
+	<field name="fromDate" class="java.lang.String">
+		<fieldDescription><![CDATA[fromDate]]></fieldDescription>
+	</field>
+	<field name="toDate" class="java.lang.String">
+		<fieldDescription><![CDATA[toDate]]></fieldDescription>
+	</field>
+	<variable name="stockGoodsQty_1" class="java.lang.Integer" resetType="Group" resetGroup="order" calculation="Sum">
+		<variableExpression><![CDATA[$F{stockGoodsQty}]]></variableExpression>
+	</variable>
+	<variable name="stockSellQty_1" class="java.lang.Integer" resetType="Group" resetGroup="order" calculation="Sum">
+		<variableExpression><![CDATA[$F{stockSellQty}]]></variableExpression>
+	</variable>
+	<variable name="stockQty_1" class="java.lang.Integer" resetType="Group" resetGroup="order" calculation="Sum">
+		<variableExpression><![CDATA[$F{stockQty}]]></variableExpression>
+	</variable>
+	<group name="Group1" isResetPageNumber="true"/>
+	<group name="order">
+		<groupExpression><![CDATA[$F{orderNo}]]></groupExpression>
+		<groupHeader>
+			<band height="19">
+				<textField>
+					<reportElement uuid="d5735d9f-d658-41b8-a131-48fd4e4c3870" x="63" y="0" width="73" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{orderNo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="4d72e6c9-e671-4481-9cb1-754b32ec4273" x="186" y="0" width="80" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{orderDate}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="0e3fe2cc-13c8-4a84-ba8e-0db811cc123e" x="308" y="0" width="106" height="19"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vendorName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="f6dbbf4e-ea7e-4a4d-819d-70bfd81bdba3" x="0" y="0" width="63" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[เลขที่ใบเสร็จ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="26d778cb-89c0-4378-9ff2-084f1c7fce43" x="136" y="0" width="50" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[วันที่สั่งซื้อ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="bd30bb77-77d5-471d-9725-3bdb7cb6bfb0" x="266" y="0" width="42" height="19"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[บริษัท]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="26">
+				<textField>
+					<reportElement uuid="8603e6b3-9b7c-4a1b-aff3-a2b1c74c530e" x="583" y="5" width="63" height="20"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{stockGoodsQty_1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="970fed6c-864c-464a-8fc3-cb59e04c53fe" x="646" y="5" width="63" height="20"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{stockSellQty_1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="8163cb48-f669-4f51-bb3c-0112cbf154fb" x="709" y="5" width="73" height="20"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{stockQty_1}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="526e6be8-1e8b-429d-bc8e-b750185d5378" x="598" y="0" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="f56f7e89-6c40-4be4-ab11-df421ff630eb" x="661" y="0" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="4a15d1f1-86e9-4c01-b62d-bb74d3530f33" x="734" y="0" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="e4d382d6-1216-4f69-91b8-88b81ea72576" x="598" y="21" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="f4b41ae4-c7de-4012-b733-6217f66df567" x="598" y="24" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="42a87e87-c21f-4ed1-bce7-ace5ae0b052d" x="661" y="21" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="f7493104-de4c-4310-8426-da5e8cd3ce98" x="661" y="24" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="d82e56a3-06ea-4957-b4fd-c424eba36510" x="734" y="21" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement uuid="dce808cb-93cf-404d-90ed-62df48186de3" x="734" y="24" width="48" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<pageHeader>
+		<band height="85">
+			<staticText>
+				<reportElement uuid="71afc35f-b7e5-459c-860c-9218226f3da2" mode="Opaque" x="0" y="66" width="782" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ddf782f1-a14a-4774-86b2-944efe0f036a" mode="Opaque" x="0" y="44" width="782" height="19"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7cde0dad-30d9-442c-ba6d-d0ae2c19e5e5" x="0" y="5" width="136" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานข้อมูลสินค้าคงเหลือ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2644cce7-83d3-4289-8f24-0f21ecebdb87" x="0" y="25" width="50" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ตั้งแต่วันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="979fc538-cb0b-4e07-a04b-60ae873719ea" x="0" y="66" width="90" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ชนิดสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="53252c12-9e2a-475f-aee1-ed9b6695ba71" x="90" y="66" width="96" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ประเภทสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ab17260d-df60-4617-a697-fb7f08b33299" x="186" y="66" width="106" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ยี่ห้อสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fe307ea0-535b-46ad-8f0d-3111d2e8cf43" x="292" y="66" width="102" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รุ่นสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0baba70b-b242-49f1-8f13-27e2ce55cced" x="186" y="25" width="50" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จนถึงวันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="320880c9-c0d5-4b2c-a62c-37eb648aa705" x="394" y="66" width="106" height="19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71f95d0e-391e-4aba-a667-ecd40318cc06" x="583" y="66" width="63" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนซื้อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0f0a9b03-d6b1-481f-8a70-68d6c86e2d07" x="646" y="66" width="63" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนขาย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="21baaa3c-7896-45e7-a89d-c721bdee897c" x="709" y="66" width="73" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[จำนวนคงเหลือ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="65a67347-cae7-4514-af28-b50274f10e42" x="50" y="25" width="136" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fromDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5d6ff64b-3b82-45e6-b876-83845d66daf6" x="236" y="25" width="109" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{toDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="19">
+			<textField>
+				<reportElement uuid="844ccf90-92a2-4a65-a8df-9d48b8cebbf4" x="0" y="0" width="90" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{goodsName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7a6a44f2-2843-464a-a39a-b91319dc30a2" x="90" y="0" width="96" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{goodsType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="89067905-e43e-41c1-b388-cf174df39034" x="186" y="0" width="106" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{goodsBrand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7a23e98e-3862-46cc-a7c1-a639fa5672af" x="292" y="0" width="102" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{goodsSub}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e97a7ac3-3950-4398-8e33-4bed4ad81adf" x="583" y="0" width="63" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stockGoodsQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0ea7bd76-3020-4442-aba9-e6f77209e7f5" x="646" y="0" width="63" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stockSellQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d7489f6f-c73b-419c-9423-73228aedb32c" x="709" y="0" width="73" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="com/lowagie/text/pdf/fonts/tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stockQty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d87ed4c9-0024-4853-b8ed-479b2dafef74" x="661" y="10" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Group" evaluationGroup="Group1">
+				<reportElement uuid="2cf33c4f-f853-4f47-98ba-00fac0fe06e2" x="742" y="10" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

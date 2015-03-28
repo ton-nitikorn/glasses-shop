@@ -1,0 +1,23 @@
+package com.glassshop.dao;
+
+import java.util.List;
+
+import com.glassshop.model.Vendor;
+
+public interface VendorDao {
+	
+	public Vendor selectById(String id);
+	
+	public List<Vendor> selectAll();
+	
+	public List<Vendor> selectNameAll();
+	
+	public int insert(Vendor vendor);
+
+	public int update(Vendor vendor);
+	
+	public int delete(String id);
+	
+	public List<Vendor> selectFillter(String vendorName, String VendorTel);
+	
+}
